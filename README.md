@@ -59,8 +59,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 ```
 
 ## Known issues
-[ ] Not everything is covered with tests and existing ones could use more love
-[ ] More advanced logic around base64 response body encoding is needed
+- [ ] Not everything is covered with tests and existing ones could use more love
+- [ ] More advanced logic around base64 response body encoding is needed
 
 ## Contributing
 Feel free to open tickets (or even better, pull requests). I am opened to suggestions. 
