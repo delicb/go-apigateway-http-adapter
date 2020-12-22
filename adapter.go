@@ -47,7 +47,12 @@ func agw2httpRequest(ctx context.Context, ev events.APIGatewayV2HTTPRequest) (*h
 	}
 
 	// prepare path
-	path := ev.RawPath + "?" + ev.RawQueryString
+	var path string
+	if len(ev.RawQueryString) > 0 {
+		path = ev.RawPath + "?" + ev.RawQueryString
+	} else {
+		path = ev.RawPath
+	}
 
 	// create request
 	req, err := http.NewRequestWithContext(
